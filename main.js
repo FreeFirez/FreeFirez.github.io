@@ -1,137 +1,30 @@
-function aparecein() {
-  document.getElementById("inicio").style.display = "block";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-  document.getElementById("gia").style.display = "none";
-}
+// Datos de las canciones (puedes agregar más)
+const songs = [
+    { title: "Rap Kings Anthem", artist: "Rap Kings", file: "rap_kings_anthem.mp3" },
+    { title: "Hustle Hard", artist: "Rap Kings", file: "hustle_hard.mp3" },
+    { title: "Street Dreams", artist: "Rap Kings", file: "street_dreams.mp3" }
+];
 
-function aparececolabora() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "block";
-document.getElementById("gia").style.display = "none";
-  
-}
+// Función para mostrar la lista de canciones
+function showPlaylist() {
+    const playlist = document.getElementById("playlist");
 
-function aparecegia() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-document.getElementById("gia").style.display = "block";
-}
-
-
-function apareceim() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "block";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-  document.getElementById("gia").style.display = "none";
-}
-
-function aparecear() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-document.getElementById("armas").style.display = "block";
-document.getElementById("colaboraciones").style.display = "none";
-document.getElementById("gia").style.display = "none";
-}
-
-
-let Sub;
-
-document.addEventListener("DOMContentLoaded", function() {
-  Sub = document.getElementById("Submenu");
- 
-});
-
-function apareceSubmenu() {
-  if (Sub.style.display === "block") {
-    Sub.style.display = "none";
-  } else {
-    Sub.style.display = "block";
-  }
-  
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll("section");
-  const submenu = document.getElementById("Submenu");
-
-  sections.forEach(function(section) {
-    section.addEventListener("click", function() {
-      submenu.style.display = "none";
+    songs.forEach((song, index) => {
+        const songElement = document.createElement("div");
+        songElement.classList.add("song");
+        songElement.textContent = `${index + 1}. ${song.title} - ${song.artist}`;
+        songElement.addEventListener("click", () => playSong(index));
+        playlist.appendChild(songElement);
     });
-  });
-})function aparecein() {
-  document.getElementById("inicio").style.display = "block";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-  document.getElementById("gia").style.display = "none";
 }
 
-function aparececolabora() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "block";
-document.getElementById("gia").style.display = "none";
-  
+// Función para reproducir una canción
+function playSong(index) {
+    const audioPlayer = document.getElementById("audioPlayer");
+    const song = songs[index];
+    audioPlayer.src = song.file;
+    audioPlayer.play();
 }
 
-function aparecegia() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-document.getElementById("gia").style.display = "block";
-}
-
-
-function apareceim() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "block";
-  document.getElementById("armas").style.display = "none";
-  document.getElementById("colaboraciones").style.display = "none";
-  document.getElementById("gia").style.display = "none";
-}
-
-function aparecear() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("personajes").style.display = "none";
-document.getElementById("armas").style.display = "block";
-document.getElementById("colaboraciones").style.display = "none";
-document.getElementById("gia").style.display = "none";
-}
-
-
-let Sub;
-
-document.addEventListener("DOMContentLoaded", function() {
-  Sub = document.getElementById("Submenu");
- 
-});
-
-function apareceSubmenu() {
-  if (Sub.style.display === "block") {
-    Sub.style.display = "none";
-  } else {
-    Sub.style.display = "block";
-  }
-  
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll("section");
-  const submenu = document.getElementById("Submenu");
-
-  sections.forEach(function(section) {
-    section.addEventListener("click", function() {
-      submenu.style.display = "none";
-    });
-  });
-});
+// Llamar a la función para mostrar la lista de canciones al cargar la página
+showPlaylist()
