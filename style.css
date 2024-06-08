@@ -1,207 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-@media not all and (monochrome) {
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.playlist {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.song {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.song:hover {
+    color: blue;
+}
+
+.audio-player {
     width: 100%;
-    height: 100%;
-    background-color: red;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
-  }
+    margin-top: 20px;
 }
-
-
-body{background-image: url(fondo.jpg);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-attachment: fixed;
-     background-position: 18% 0%;
-}
-
-
-
-
-#inicio {
- 
-  width: 100%;
-  height: 100%;
-  display: block;
- border: solid wheat 1px;
-  margin-top: 75px;
-
-  
-}
-
-#personajes {
-  background-color: seagreen;
-  width: 100%;
-  height: 1000px;
-  display: none;
-border: solid wheat 3px;
-}
-
-#armas {
-  background-color: blue;
-  width: 100%;
-  height: 1000px;
-  display: none;
-border: solid wheat 3px;
-}
-
-#colaboraciones {
-  background-color: yellow;
-  width: 100%;
-  height: 1000px;
-  display: none;
-border: solid wheat 3px;
-}
-
-#gia {
-  background-color: plum;
-  width: 100%;
-  height: 1000px;
-  display: none;
-border: solid wheat 3px;
-}
-
-.menu {
-  background-color: black;
-  overflow: hidden;
-  position: fixed; 
-  top: 0;
-  width: 97%;
-  display: block;
-  z-index: 20;
-border-bottom-left-radius: 10%;
-border-bottom-right-radius: 5%;
-border: solid wheat 3px;
-}
-
-.menu li {
-  color: lightblue;
-}
-
-.menu_simbo {
-  color: white;
-  text-decoration: none;
-  margin-left: -20px;  
-}
-
-.Submenu_simbo{
-  color: royalblue;
-  position: relative;
-  right: 4px;
-  text-decoration: none;
-  margin-right: 20px;
- 
-}
-
-
-
-.Submenu a:hover {background-color: rgb(40, 16, 790);
-             
-            
-}
-
-
-
-.Submenu {
-  background-color: skyblue;
-  overflow: hidden;
-  position: fixed; 
-  top: 0;
-  width: 37%;
-  display: block;
-  height: 30%;
-  z-index: 10;
-  display: none;
-  border:  wheat solid 3px;
-  margin-top: 55px;
-  border-radius: 8%;
-  
-}
-
-
-
-.logomenu{height: 20px;
-          width: 30px;
-         
-}
-
-.simbolo{width: 90%; 
-         height: 70px;
-      position: absolute;
-      margin-left: 60px;
-}
-
-h1{color: white;
-   text-align: center;
-}
-
-.hh{color: darkgoldenrod;}
-
-.imagdeini{height: 190px;
-            width: 98%;
-            margin-left: 4px;
-            position: relative;
-            bottom: -200px;
-  
-}
-            
-.ffred{color: darkred;
-       display: inline-block;
-}
-
-
-
-p{color: skyblue;
-  background-image: url(fondopp.jpg);
-}
-
-#bu{color: white;
-  background-color: black;
-}
-
-.menu_dos{position: absolute;
-        color: darkred;
-        margin-left: 171px;
-        margin-top: -129px;
-      
-        border-radius: 20%;
-       
-}
- .menu_dos li{color: black;}
-
-.menu_dos a{text-decoration: none;
-          color: white;
-}
-
- .menu_uno{background-color: black;
-           border-radius:10%; 
-           width: 75%;
-           margin-left: 11%;
-           border: solid blue 3px;
-           position: relative;
-           
- }
- 
- .menu_uno a{color: red;
-            text-decoration: none;
-             
- }
- 
- .menu_uno a:hover{background-color: grey;}
- 
- .imde{height: 60px;
-       position: relative;
-       top: 15px;
-       width: 100%;
-        font-size: 32px;
-        text-align: center;
- }
-       
