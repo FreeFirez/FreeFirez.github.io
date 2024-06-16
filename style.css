@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
 }
@@ -9,11 +9,22 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 header h1 {
-    text-align: center;
-    color: #333;
+    font-size: 32px;
 }
 
 main {
@@ -30,7 +41,7 @@ img {
 
 p {
     font-size: 18px;
-    color: #555;
+    color: #333;
     line-height: 1.6;
 }
 
